@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	{{#with header}}
+	{{!-- {{#with header}}
 	<header>
 		<div>
 			<h1>{{name.firstname}} {{name.lastname}}
@@ -34,46 +34,24 @@
 		<br>
 		<hr>
 	</header>
-	{{/with}}
+	{{/with}} --}}
 
 	{{> nav}}
+
+	<br>
+	<hr>
+
 
 
 	{{! ↓ ця кострукція показує куди шаблонізатору треба вставляти код з container файлу --}}
 	{{{body}}}
 
+	<br>
+	<hr>
 
-
-
-	{{!-- {{#with footer}}
-	<footer>
-		<hr>
-		<br>
-		<div>
-			{{#with social}}
-			{{> link text=email.text href=email.href blank=true}}
-			{{> link text=phone.text href=phone.href blank=true }}
-			{{> link text=linkedin.text href=linkedin.href blank=true line=true}}
-			{{/with}}
-		</div>
-		<br>
-		<div>
-			<em>Copyrigt by {{../header.name.firstname}} {{../header.name.lastname}}</em>
-		</div>
-		<br>
-		<div>
-			<em>
-				{{../header.address}}
-			</em>
-		</div>
-	</footer>
-	{{/with}} --}}
 
 </body>
 
-{{!-- {{> footer social=footer.social firstname=header.name.firstname lastname=header.name.lastname
-address=header.address}} --}}
 {{> footer social=footer.social name=header.name.firstname lastname=header.name.lastname address=header.address}}
-
 
 </html>

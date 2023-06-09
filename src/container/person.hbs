@@ -1,0 +1,138 @@
+{{#with person}}
+<div>
+
+    <h1>{{name}}</h1>
+    <div> Age: {{age}}</div>
+    <div> Gender: {{gender}}</div>
+</div>
+<br>
+<br>
+
+<div>
+    <address>
+        <em>
+            {{address.street}} <br>
+            {{address.city}}, {{address.state}} <br>
+            {{address.zip}}, {{address.country}}.
+        </em>
+    </address>
+</div>
+<br>
+<hr>
+<div>
+    {{> title data="Education" big=true}}
+    {{#each education}}
+    <div>Degree: {{degree}}.</div>
+    <div>Major: {{major}}.</div>
+    <div>University: {{university}}.</div>
+    <div>Graduation Year: {{graduationYear}}.</div>
+    {{/each}}
+</div>
+<br>
+<hr>
+
+
+<div>
+    {{> title data="Work experience" big=true}}
+    {{#each workExperience}}
+    <div>
+        <div> Company: {{company}}</div>
+        <div> Title: {{title}}</div>
+        <div>{{startDate}} - {{endDate}}
+            {{#if endDate}}
+            {{else}} (Still working)
+            {{/if}}
+        </div>
+        <div> Responsibilities:
+            <ul>
+                {{#each responsibilities}}
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div>
+            Year Founded: {{year_founded}}
+        </div>
+        <div>Industry: {{industry}}</div>
+    </div>
+    <br>
+    <hr>
+
+
+    <div>
+        <h3>Employees</h3>
+        {{#each employees}}
+        <div>
+            <div>Name: {{name}}</div>
+            <div>Position: {{position}}</div>
+            <div>Department: {{department}}</div>
+        </div>
+        <br>
+        <hr>
+        <div>
+            <h4>Projects</h4>
+            {{#each projects}}
+            <div>
+                <div>Name: {{name}}</div>
+                <div>Description: {{description}}</div>
+                <div>Status: {{status}}</div>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h5>Teams</h5>
+                {{#each teams}}
+                <div>
+                    <div>Team Name: {{team_name}}</div>
+                    <div>
+                        Team Leader: {{team_leader.name}}, {{team_leader.title}},<br>
+                        {{team_leader.email}}
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div>
+                    <h6>Team Members</h6>
+                    {{#each team_members}}
+                    <div>
+                        <div>Name: {{name}}</div>
+                        <div>Title: {{title}}</div>
+                        <div>Email: {{email}}</div>
+                        <div>Skills:{{skils}}</div>
+                    </div>
+                    <br>
+                    <hr>
+                    <div>
+                        <h5>Projects</h5>
+                        {{#each projects}}
+                        <div>
+                            <div>Name:{{name}}</div>
+                            <div>Description: {{description}}</div>
+                            <div>Technologies:{{technologies}}</div>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <h5>Team members</h5>
+                            {{#each teamMembers}}
+                            <div>
+                                <div>Name: {{name}}</div>
+                                <div>Title: {{title}}</div>
+                            </div>
+                            {{/each}}
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</div>
+{{/with}}

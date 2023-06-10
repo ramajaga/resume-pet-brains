@@ -1,0 +1,83 @@
+<div>
+    <h1>Web Technologies</h1>
+    <br>
+    <hr>
+
+    {{#each web.languages}}
+    <div>
+        <h2>{{name}} ({{version}})</h2>
+        <p>{{description}}</p>
+        {{#if elements}}
+        <div>
+            <h3>Elements:</h3>
+            {{#each elements}}
+            <div>
+                <h4>{{name}}</h4>
+                <p>{{description}}</p>
+                {{#if attributes}}
+                <div>
+                    <h5>Attributes:</h5>
+                    {{#each attributes}}
+                    <div>
+                        <div>Name: {{name}}</div>
+                        <div>Description: {{description}}</div>
+                    </div>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+        {{#if properties}}
+        <div>
+            <h3>Properties:</h3>
+            {{#each properties}}
+            <div>
+                <h4>{{name}}</h4>
+                <p>{{description}}</p>
+                {{#if values}}
+                <div>
+                    <h5>Values:</h5>
+                    {{#each values}}
+                    <div>
+                        <div>Value: <strong>{{value}}</strong></div>
+                        <div>Description: {{description}}</div>
+                    </div>
+                    <br>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+        {{#if functions}}
+        <div>
+            <h3>Functions:</h3>
+            {{#each functions}}
+            <div>
+                <h4>{{name}}</h4>
+                <p>{{description}}</p>
+                {{#if parameters}}
+                <div>
+                    <h5>Parameters:</h5>
+                    {{#each parameters}}
+                    <div>
+                        <div>Name: {{name}}</div>
+                        <div>Type: {{type}}</div>
+                        <div>Description: {{description}}</div>
+                    </div>
+                    <br>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+    <br>
+    <hr>
+    {{/each}}
+</div>

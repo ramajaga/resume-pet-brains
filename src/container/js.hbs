@@ -1,16 +1,22 @@
-<h1>{{name}}</h1>
+<span class="badge bg-primary">
+    <h1>{{name}}</h1>
+</span>
 <p>{{description}}</p>
 <hr>
 
 
 <div>
-    <h2>History</h2>
+    <span class="badge bg-info text-dark">
+        <h2>History</h2>
+    </span>
     <p>Year: {{history.year}}</p>
     <p>Founder: {{history.founder}}</p>
 </div>
 <hr>
 <div>
-    <h2>Types</h2>
+    <span class="badge bg-secondary">
+        <h2>Types</h2>
+    </span>
     <ul>
         {{#each types}}
         <li>{{this}}</li>
@@ -21,7 +27,9 @@
 <hr>
 
 <div>
-    <h2>Syntax <span class="badge badge-secondary">New</span></h2>
+    <span class="badge bg-secondary">
+        <h2>Syntax</h2>
+    </span>
     <div>
         <h3>Variables</h3>
         <ul>
@@ -67,7 +75,9 @@
 <hr>
 
 <div>
-    <h2>Features <span class="badge badge-secondary">New</span></h2>
+    <span class="badge bg-secondary">
+        <h2>Features</h2>
+    </span>
     <ul>
         {{#each features}}
         <li>{{this}}</li>
@@ -78,7 +88,9 @@
 <hr>
 
 <div>
-    <h2>Libraires <span class="badge badge-secondary">New</span></h2>
+    <span class="badge bg-secondary">
+        <h2>Libraires</h2>
+    </span>
     <ul>
         {{#each libraries}}
         <li>{{this}}</li>
@@ -89,7 +101,10 @@
 <hr>
 
 <div>
-    <h2>Tools <span class="badge badge-secondary">New</span></h2>
+    <span class="badge bg-secondary">
+        <h2>Tools</h2>
+    </span>
+
     <ul>
         {{#each tools}}
         <li>{{this}}</li>

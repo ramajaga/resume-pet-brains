@@ -1,0 +1,199 @@
+<h1>{{make}} "{{model}}" ({{year}}.)<span class="badge badge-secondary">New</span></h1>
+<h3>Color: {{color}}.<span class="badge badge-secondary">New</span></h3>
+<br>
+<hr>
+<h3>Features :<span class="badge badge-secondary">New</span></h3>
+<hr>
+
+<h4>Interior :<span class="badge badge-secondary">New</span></h4>
+<ul>
+    <li>Seats:</li>
+    <ul>
+        {{#with features.interior.seats}}
+        <li>Material: {{material}}</li>
+        <li>Color: {{color}}</li>
+        <li>Heated:
+            {{#if heated}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>Ventilated:
+            {{#if ventilated}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        {{/with}}
+    </ul>
+    <br>
+    <li>Dashboard:</li>
+    <ul>
+        {{#with features.interior.dashboard}}
+        <li>Material: {{material}}</li>
+        <li>Color: {{color}}</li>
+        <li>Display:</li>
+        <ul>
+            {{#with display}}
+            <li>Type: {{type}}</li>
+            <li>Size: {{size}}</li>
+            <li>Resolution: {{resolution}}</li>
+            <li>Touchscreen:
+                {{#if touchscreen}} Yes
+                {{else}} No
+                {{/if}}</li>
+            {{/with}}
+        </ul>
+        {{/with}}
+    </ul>
+    <br>
+    <li>Audio:</li>
+    <ul>
+        {{#with features.interior.audio}}
+        <li>System: {{system}}</li>
+        <li>Speakers: {{speakers}}</li>
+        <li>Subwoofer:
+            {{#if subwoofer}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>Bluetooth:
+            {{#if bluetooth}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>USB:
+            {{#if USB}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        {{/with}}
+    </ul>
+</ul>
+<br>
+<hr>
+<h4>Exterior: <span class="badge badge-secondary">New</span></h4>
+<ul>
+    <li>Wheels:</li>
+    <ul>
+        {{#with features.exterior.wheels}}
+        <li>Size: {{size}}</li>
+        <li>Type: {{type}}</li>
+        <li>Color: {{color}}</li>
+        {{/with}}
+    </ul>
+    <br>
+    <li>Headlights:</li>
+    <ul>
+        {{#with features.exterior.headlights}}
+        <li>Type: {{type}}</li>
+        <li>Brightness: {{brightness}}</li>
+        <li>Automatic:
+            {{#if automatic}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        {{/with}}
+    </ul>
+    <br>
+    <li>Sunroof:</li>
+    <ul>
+        {{#with features.exterior.sunroof}}
+        <li>Type: {{type}}</li>
+        <li>Size: {{size}}</li>
+        <li>Automatic:
+            {{#if automatic}} Yes
+            {{else}} No
+            {{/if}}</li>
+        {{/with}}
+    </ul>
+</ul>
+<br>
+<hr>
+<h4>Safety</h4>
+<ul>
+    <li>Airbags:</li>
+    <ul>
+        {{#with features.safety.airbags}}
+        <li>Front: {{front}}</li>
+        <li>Side: {{side}}</li>
+        <li>Knee: {{knee}}</li>
+        <li>Rear: {{rear}}</li>
+        {{/with}}
+    </ul>
+    <br>
+    <li>Assistance:</li>
+    <ul>
+        {{#with features.safety.assistance}}
+        <li>Blind Spot Monitoring:
+            {{#if blind_spot_monitoring}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>Rear Cross Traffic Alert:
+            {{#if rear_cross_traffic_alert}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>Lane Departure Warning:
+            {{#if lane_departure_warning}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>Adaptive Cruise Control:
+            {{#if adaptive_cruise_control}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        <li>Collision Warning:
+            {{#if collision_warning}} Yes
+            {{else}} No
+            {{/if}}
+        </li>
+        {{/with}}
+    </ul>
+</ul>
+<br>
+<hr>
+
+<h3>Engine</h3>
+<ul>
+    {{#with engine}}
+    <li>Type: {{type}}</li>
+    <li>Displacement: {{displacement}}</li>
+    <li>Horsepower: {{horsepower}}</li>
+    <li>Torque: {{torque}}</li>
+    <li>Transmission:</li>
+    <ul>
+        {{#with transmission}}
+        <li>Type: {{type}}</li>
+        <li>Gears: {{gears}}</li>
+        {{/with}}
+    </ul>
+    {{/with}}
+</ul>
+<hr>
+
+<h3>Fuel Economy</h3>
+<ul>
+    {{#with fuel_economy}}
+    <li>City: {{city}}</li>
+    <li>Highway: {{highway}}</li>
+    <li>Combined: {{combined}}</li>
+    {{/with}}
+</ul>
+<br>
+<hr>
+<h3>Price <span class="badge badge-secondary">New</span></h3>
+<ul>
+    {{#with price}}
+    <li>Base: {{base}}</li>
+    <li>Destination: {{destination}}</li>
+    <li>Options:</li>
+    <ul>
+        {{#each options}}
+        <li>{{@key}}: {{this}}</li>
+        {{/each}}
+    </ul>
+    <li>Total: {{total}}</li>
+    <a href="#"><button type="button" class="btn btn-primary">BUY NOW</button></a>
+    {{/with}}
+</ul>

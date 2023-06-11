@@ -1,0 +1,113 @@
+<h1>{{name}}</h1>
+<p>{{description}}</p>
+<hr>
+
+
+<div>
+    <h2>History</h2>
+    <p>Year: {{history.year}}</p>
+    <p>Founder: {{history.founder}}</p>
+</div>
+<hr>
+<div>
+    <h2>Types</h2>
+    <ul>
+        {{#each types}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+
+<div>
+    <h2>Syntax <span class="badge badge-secondary">New</span></h2>
+    <div>
+        <h3>Variables</h3>
+        <ul>
+            {{#each syntax.variables}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <h3>Functions</h3>
+        <ul>
+            {{#each syntax.functions}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <h3>Conditionals</h3>
+        <ul>
+            {{#each syntax.conditionals}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <h3>Loops</h3>
+        <ul>
+            {{#each syntax.loops}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div>
+        <h3>Classes</h3>
+        <ul>
+            {{#each syntax.classes}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<br>
+<hr>
+
+<div>
+    <h2>Features <span class="badge badge-secondary">New</span></h2>
+    <ul>
+        {{#each features}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+
+<div>
+    <h2>Libraires <span class="badge badge-secondary">New</span></h2>
+    <ul>
+        {{#each libraries}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+
+<div>
+    <h2>Tools <span class="badge badge-secondary">New</span></h2>
+    <ul>
+        {{#each tools}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+<br>
+<hr>
+
+<div>
+    <h2>Community</h2>
+    <ul>
+        {{#each community}}
+        <li>
+            ({{this.type}}) <br>
+            <a class="btn btn-primary" href="#" role="button">{{this.name}}</a>
+        </li>
+        <br>
+        {{/each}}
+    </ul>
+</div>

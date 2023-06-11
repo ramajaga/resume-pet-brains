@@ -1,11 +1,15 @@
-<h1>{{make}} "{{model}}" ({{year}}.)<span class="badge badge-secondary">New</span></h1>
-<h3>Color: {{color}}.<span class="badge badge-secondary">New</span></h3>
+<span class="badge bg-primary">
+    <h1>{{make}} "{{model}}" ({{year}}.)</h1>
+</span>
+<h3>Color: {{color}}.</h3>
 <br>
 <hr>
-<h3>Features :<span class="badge badge-secondary">New</span></h3>
+<h3>Features :</h3>
 <hr>
 
-<h4>Interior :<span class="badge badge-secondary">New</span></h4>
+<span class="badge bg-info text-dark">
+    <h3>Interior</h3>
+</span>
 <ul>
     <li>Seats:</li>
     <ul>
@@ -70,7 +74,9 @@
 </ul>
 <br>
 <hr>
-<h4>Exterior: <span class="badge badge-secondary">New</span></h4>
+<span class="badge bg-info text-dark">
+    <h3>Exterior:</h3>
+</span>
 <ul>
     <li>Wheels:</li>
     <ul>
@@ -108,7 +114,9 @@
 </ul>
 <br>
 <hr>
-<h4>Safety</h4>
+<span class="badge bg-info text-dark">
+    <h3>Safety</h3>
+</span>
 <ul>
     <li>Airbags:</li>
     <ul>
@@ -153,8 +161,9 @@
 </ul>
 <br>
 <hr>
-
-<h3>Engine</h3>
+<span class="badge bg-info text-dark">
+    <h3>Engine</h3>
+</span>
 <ul>
     {{#with engine}}
     <li>Type: {{type}}</li>
@@ -171,8 +180,9 @@
     {{/with}}
 </ul>
 <hr>
-
-<h3>Fuel Economy</h3>
+<span class="badge bg-info text-dark">
+    <h3>Fuel economy</h3>
+</span>
 <ul>
     {{#with fuel_economy}}
     <li>City: {{city}}</li>
@@ -182,7 +192,9 @@
 </ul>
 <br>
 <hr>
-<h3>Price <span class="badge badge-secondary">New</span></h3>
+<span class="badge bg-success">
+    <h3>Price</h3>
+</span>
 <ul>
     {{#with price}}
     <li>Base: {{base}}</li>
@@ -193,7 +205,7 @@
         <li>{{@key}}: {{this}}</li>
         {{/each}}
     </ul>
-    <li>Total: {{total}}</li>
+    <li>Total: {{total}} $</li>
     <a href="#"><button type="button" class="btn btn-primary">BUY NOW</button></a>
     {{/with}}
 </ul>

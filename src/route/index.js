@@ -1133,13 +1133,11 @@ router.get('/facebook', function (req, res) {
   })
 })
 // ================================================================
-
 router.get('/task21', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
-    layout: 'Basic',
     heading: {
       main: {
         title: 'JavaScript',
@@ -1202,5 +1200,7 @@ router.get('/task21', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-// Підключаємо роутер до бек-енду
+
+// ================================================================
+
 module.exports = router
